@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Myportfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+
+  <style>
+    html,body {
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+    }
+
+    .nav-link {
+        display:  inline-block;
+        transition: 0.3s;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .nav-link:hover {
+        background-color: #000;
+    }
+    ul li:last-child a {
+        letter-spacing: 4px;
+    }
+    ul li:last-child a:hover {
+        background-color: transparent;
+    }
+
+    #backend {
+        background: url('laptop.jpg') no-repeat center / cover;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+    .wp {
+        position: absolute;
+        top: 40%;
+        left: 4%;
+    }
+    .fs-1 {
+        font-size: 20px;
+    }
+
+    .fs-2 {
+        font-size: 30px;
+    }
+    .fa-file-pen, 
+    .fa-address-card, 
+    .fa-studiovinari, 
+    .fa-thumbs-up  {
+        font-size: 40px;
+        transition: 0.3s;
+    }
+    .fa-handshake, 
+    .fa-lightbulb, 
+    .fa-sun {
+        transition: 0.3s;
+    }
+
+    .fa-file-pen:hover, 
+    .fa-address-card:hover, 
+    .fa-studiovinari:hover, 
+    .fa-thumbs-up:hover, 
+    .fa-handshake:hover,  
+    .fa-lightbulb:hover, 
+    .fa-sun:hover {
+        color: #ff8f00;
+    }
+
+    .fa-facebook, 
+    .fa-linkedin, 
+    .fa-twitter, 
+    .fa-pinterest, 
+    .fa-instagram {
+        transition: 0.3s;
+    }
+
+    .fa-facebook:hover, 
+    .fa-linkedin:hover, 
+    .fa-twitter:hover, 
+    .fa-pinterest:hover, 
+    .fa-instagram:hover {
+        color: #ff8f00;
+    }
+    
+    .social-item {
+        list-style: none;
+    }
+
+    .card::after {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: 0.4s;
+        background-color: #ff8f00;
+    }
+    .card:after {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 5px;
+    }
+
+    .card:hover::after {
+        width: 100%;
+    }
+    img, svg {
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .wrap p::before {
+        content: '✓';
+        display: inline-block;
+        color: #ff8f00;
+        text-align: center;
+        width: 25px;
+        transition: 0.2s all;
+
+    }
+    /*.p-2 {
+	    padding: 2.5rem !important;
+    }*/
+    .wrapping ul li span {
+        transition: 0.3s !important;
+    }
+
+    .wrapping ul li span:hover {
+        background: #ff8f00 !important;
+        color: #000 !important;
+    }
+    
+
+    @media only screen and (min-width: 992px) and (max-width: 1167px) {
+        .navbar-brand {
+	        margin-right: 9rem;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        html, body {
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        .photo-split img {
+            width: 100%;
+        }
+    }
+    
+  </style>
+  
+</head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+<body>
+
+    <section style="background: #343a40;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between bg-dark text-light">
+                <div class="ml-3">
+                    <h1>Myportfolio</h1>
+                </div>
+                <nav class="navbar bg-dark navbar-expand-lg navbar-dark navbar-brand w-50">
+                    <button class="navbar-toggler bg-dark ml-auto" type="button" aria-label="Toggle navigation"   data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" style="border: none; outline: none; box-shadow: none; font-size: 20px;"><span class="navbar-toggler-icon my-toggler"></span></button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav text-center mx-auto">
+                            <li class="nav-item"><a class="nav-link text-light p-2 mr-2" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-light p-2 mr-2" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-light p-2 mr-2" href="#">Services</a></li>
+                            <li class="nav-item"><a class="nav-link text-light p-2 mr-2" href="#">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link text-light p-2 mr-2" href="#">My Project</a></li>
+                            <li class="nav-item btn bg-light p-1"><a class="nav-link text-dark mx-auto p-2" href="#">Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <div style="min-height: 100vh;">
+
+        <div class="position-relative">
+            <div id="backend">
+                <div class="text-white border border-white d-inline-block p-4 wp">
+                    <div class="border border-white p-4 text-center">
+                        <h1 class="d-inline-block text-uppercase">Hello</h1>
+                        <h2 class="text-uppercase">I'm Abhishek Mohajan</h2>
+                        <p class="text-uppercase fs-1">SPECIALIZED IN DESIGN</p>
+                        <a href="#" class="text-decoration-none btn btn-lg btn-success btn-block text-black fs-1" type="button">About Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="min-height: 70vh; padding-top: 40px;">
+        <div class="container">
+            <div>
+                <div class="text-center">
+                    <h1 class="h3 border-bottom border-1 border-dark d-inline-block pb-2">I'M SPECIALIZED IN</h1>
+                    <h4 class="text-muted h5">Lorem ipsum dolor amet, consecte tempor incididunt</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center d-flex align-items-center p-5">
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-sharp fa-solid fa-file-pen"></i></span>
+                        <h3>CONCEPTING</h3>
+                        <p>Lorem ipsum dolor amet, consecte tempor incididunt ut labore et dolore tumber tur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-solid fa-address-card"></i></span>
+                        <h3>UI/UX</h3>
+                        <p>Lorem ipsum dolor amet, consecte tempor incididunt ut labore et dolore tumber tur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-brands fa-studiovinari"></i></span>
+                        <h3>VISUAL DESIGN</h3>
+                        <p>Lorem ipsum dolor amet, consecte tempor incididunt ut labore et dolore tumber tur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-solid fa-thumbs-up"></i></span>
+                        <h3>INTERACTION</h3>
+                        <p>Lorem ipsum dolor amet, consecte tempor incididunt ut labore et dolore tumber tur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="min-height: 70vh;">
+        <div class="container">
+            <div>
+                <div class="text-center">
+                    <h1 class="h3 border-bottom border-1 border-dark d-inline-block pb-2">MY WORKING PROCESS</h1>
+                    <h4 class="text-muted h5">Lorem ipsum dolor amet, consecte tempor incididunt</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center d-flex align-items-center p-5 text-center">
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-solid fa-handshake pb-3 fs-2"></i></span>
+                        <h1 class="h4">DISCUSS THE PROJECT</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <a href="#" class="text-decoration-none text-info">Learn more</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-solid fa-lightbulb pb-3 fs-2"></i></span>
+                        <h1 class="h4">LOT OF CONCEPTING</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <a href="#" class="text-decoration-none text-info">Learn more</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-brands fa-studiovinari pb-3 fs-2"></i></span>
+                        <h1 class="h4">UX/UI PLANNING</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><a href="#" class="text-decoration-none text-info">Learn more</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 row-item col-lg-3">
+                    <div class="card-img align-left pb-3">
+                        <span><i class="fa-solid fa-sun pb-3 fs-2"></i></span>
+                        <h1 class="h4">DESIGN</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <a href="#" class="text-decoration-none text-info">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="min-height: 100vh;">
+        <div class="container">
+            <div>
+                <div class="text-center">
+                    <h1 class="h3 d-inline-block border-bottom border-dark pb-2">Who Help Me?</h1>
+                    <p class="h5 p-2" style="line-height: 2rem; font-weight: 400; font-size: 1.2rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus nostrum modi consequuntur ratione, quam, quo! Neque repudiandae molestias, maiores ab illo laboriosam, voluptatibus odit omnis cupiditate, ex voluptatem a laudantium! </p>
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card mr-1 bg-dark">
+                    <div class="card-body">
+                        <img src="face1.jpg" class="card-img" alt="John Doe">
+                    </div>
+                    <div class="bg-dark">
+                        <ul class="social-item text-center">
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-facebook"></span></a></li>
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-linkedin"></span></a></li>
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-twitter"></span></a></li>
+                        </ul>
+                        <div class="text-center text-light">
+                            <h2 class="h5">John Doe</h2>
+                            <h6>Designer</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mr-1 bg-dark">
+                    <div class="card-body">
+                        <img src="face2.jpg" class="card-img" alt="Amanda">
+                    </div>
+                    <div class="bg-dark">
+                        <ul class="social-item text-center">
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-facebook"></span></a></li>
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-linkedin"></span></a></li>
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-twitter"></span></a></li>
+                        </ul>
+                        <div class="text-center text-light">
+                            <h2 class="h6">Amanda Adams</h2>
+                            <h6 clas="h4">Photographer</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark">
+                    <div class="card-body">
+                        <img src="face3.jpg" class="card-img" alt="John">
+                    </div>
+                    <div class="bg-dark">
+                        <ul class="social-item text-center">
+                            <li class="d-inline mr-3"><a href="#" class="text-light" style="font-size: 20px;"><span class="fab fa-facebook"></span></a></li>
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-linkedin"></span></a></li>
+                            <li class="d-inline mr-3"><a href="" class="text-light" style="font-size: 20px;"><span class="fab fa-twitter"></span></a></li>
+                        </ul>
+                        <div class="text-center text-light">
+                            <h2 class="h5">John Smith </h2>
+                            <h6>Designer</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+        <div class="container-fluid">
+            <div class="row align-items-center d-flex justify-content-center content-row">
+                <div class="text-center text-sm-center text-md-center text-lg-left col-lg-6">
+                    <div>
+                        <h1 class="display-6">About Me</h1>
+                        <h3 class="h5">I AM A DESIGNER & PROGRAMMER</h3>
+                        <p style="font-size: 0.8rem; line-height: 30px;" class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui iure eaque, molestiae ipsum harum enim ex quod sapiente, dolores ducimus fugiat impedit delectus provident placeat. Iste sit similique, veniam rerum. Quidem voluptatem provident illo eos, ex facilis.</p>
+                    </div>
+                    <div>
+                        <div class="wrap">
+                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <div class="wrapping">
+                        <ul class="d-flex align-items-center justify-content-center">
+                            <li class="d-inline col-sm-3 col-lg-2"><a href="#" style="font-size: 20px;"><span class="fab fa-facebook text-light bg-dark p-3 rounded-circle"></span></a></li>
+                            <li class="d-inline col-sm-3 col-lg-2"><a href="#" style="font-size: 20px;"><span class="fab fa-twitter text-light bg-dark p-3 rounded-circle"></span></a></li>
+                            <li class="d-inline col-sm-3 col-lg-2"><a href="#" style="font-size: 20px;"><span class="fab fa-instagram text-light bg-dark p-3 rounded-circle"></span></a></li>
+                            <li class="d-inline col-sm-3 col-lg-2"><a href="#" style="font-size: 18px;"><span class="fab fa-linkedin text-light bg-dark p-3 rounded-circle"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-md-12 col-lg-6 text-center photo-split">
+                    <img src="design.jpg" alt="Design">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="min-height: 100vh; margin-top: 40px; ">
+        <div class="container-fluid text-light">
+            <div class="row row-item align-items-center d-flex justify-content-center bg-dark">
+                <div class="col-md-12 col-lg-6 text-center photo-split">
+                    <img src="02.jpg"  alt="banner">
+                </div>
+                <div class="col-md-12 col-lg-6 p-5">
+                    <div class="">
+                        <h1 class="h2" style="line-height: 2rem; color: #ff8f00;">About Me</h1>
+                        <h3 class="h4" style="line-height: 2rem;">I AM A WEB DESIGNER</h3>
+                        <p style="font-size: 13px; line-height: 30px; text-align: justify;" class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque architecto delectus nisi perspiciatis exercitationem doloribus ex quis a, facere nulla, laboriosam nemo iusto maxime velit optio magnam minus amet. Molestiae maxime laborum incidunt ea sed provident tempora modi inventore recusandae consectetur impedit numquam ut expedita ratione repellendus ullam minus, itaque non sapiente ipsum perspiciatis! Saepe, officia. Recusandae est, pariatur!</p>
+                    </div>
+                    <div class="row">
+                        <ul class="d-flex align-items-center justify-content-center">
+                            <li class="d-inline m-2 p-2"><a href="#" class="text-light" style="font-size: 30px;"><span class="fab fa-facebook"></span></a></li>
+                            <li class="d-inline m-2 p-2"><a href="#" class="text-light" style="font-size: 30px;"><span class="fab fa-instagram"></span></a></li>
+                            <li class="d-inline m-2 p-2"><a href="#" class="text-light" style="font-size: 30px;"><span class="fab fa-twitter"></span></a></li>
+                            <li class="d-inline m-2 p-2"><a href="#" class="text-light" style="font-size: 30px;"><span class="fab fa-linkedin"></span></a></li>
+                            <li class="d-inline m-2 p-2"><a href="#" class="text-light" style="font-size: 30px;"><span class="fab fa-pinterest"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <div class="container-fluid bg-dark text-light">
+            <div class="d-flex align-items-center justify-content-center">
+                <h1 class="h4">More Update Coming Soon.....!</h1>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
