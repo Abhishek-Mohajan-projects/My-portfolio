@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Services</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+    
+        html, body {
+            overflow-x: hidden;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+        .img {
+            background: url('background7.jpg') no-repeat center center / cover;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        /*.position-relative {
+            position: relative;
+            top: 120px;
+        }*/
+        .opacity {
+            opacity: 0.8;
+        }
+        .arrow-wrapper {
+            position: relative;
+        }
+        .arrow-wrapper span {
+            position: relative;
+            display: inline;
+            margin: auto;
+            left: 47%;
+            top: 15%;
+            cursor: pointer;
+            font-size: 2.1rem;
+            border-radius: 50%;
+            border: none;
+            background: #010101c5;
+            outline: none;
+            opacity: 1;
+            
+        }
+        .arrow-wrapper span i {
+            opacity: 0.8;
+            transform: rotate(360deg);
+            animation: move 2s infinite ease-in-out;
+        }
+
+        @keyframes move {
+            0% {
+                margin-top: 0;
+            }
+            50% {
+                margin-top: 50px;
+            }
+            100% {
+                margin-top: 0;
+            }
+        }
+        .media-container-row {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        .list-style-none {
+            list-style: none;
+        }
+        .table-content {
+            margin-bottom: 25px;
+            padding: 0;
+        }
+        .table-content > li {
+            border-bottom: 1px solid #f2f2f2;
+            padding: 1em 1em;
+        }
+        .display-5 {
+            font-size: 1rem;
+        }
+        .gotopbtn {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            bottom: 40px;
+            right: 50px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-size: 22px;
+            display: none;
+        }
+
+        @media only screen and (max-width: 575px) {
+            .arrow-wrapper {
+                display: none;
+            }
+            .text-justify.none {
+                display:none;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .arrow-wrapper {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <div style="height: 70vh;">
+        <div class="img">
+            <div>
+                <div class="row d-flex align-items-center justify-content-center p-4">
+                    <div class="col-sm-12 col-md-12 col-lg-6 border bg-light p-3 opacity">
+                        <div class="border p-5 border-dark text-center">
+                            <h2 style="font-weight: bold; font-size: 1.8em;">My <span class="text-warning">Portfolio</span></h2>
+                            <h4 class="h5" style="letter-spacing: 2px; font-size: 0.9rem; line-height: 2rem;">COMPATIBLE WITH Netenvie THEME</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-wrapper">
+                    <a href="#scroll">
+                        <span class="text-light p-3"><i class="fa-solid fa-arrow-down p-2"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px;">
+        <div class="container">
+            <div class="text-justify border-left border-warning m-5 none">
+                <blockquote class="p-4 w-60 text-justify" style="font-size: 18px; line-height: 41px;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur facilis expedita cum iste voluptate itaque doloribus molestias numquam natus voluptates, molestiae tempora praesentium ratione dicta laudantium, excepturi voluptatibus, assumenda repellendus!
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; min-height: 20vh;" id="scroll">
+        <div class="container">
+            <div class="text-center pb-3">
+                <h2 class="d-inline border-bottom border-dark">MY WORK</h2>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; min-height: 50vh;">
+        <div class="container-fluid">
+            <div class="media-container-row">
+                <div class="col-12 col-md-5 justify-content-center col-lg-3 border">
+                    <div class="text-center price-items">
+                        <div class="p-2">
+                            <h4 class="h6" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">STARTER</h4>
+                        </div>
+                        <div class="bg-dark text-muted">
+                            <h3 class="display-6">$180.00</h3>
+                            <span>PER PROJECT</span>
+                        </div>
+                        <ul class="list-style-none table-content display-5">
+                            <li>Branding</li>
+                            <li>Concepting</li>
+                            <li class="bg-secondary">Ui/Ux</li>
+                            <li>Marketing Material</li>
+                            <li class="bg-secondary">Website Design</li>
+                        </ul>
+                        <div>
+                            <a href="#" class="btn btn-primary">PURCHASE IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 justify-content-center col-lg-3 border">
+                    <div class="text-center price-items">
+                        <div class="p-2"><h4 class="h6" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">PREMIUM</h4></div>
+                        <div class="bg-dark text-muted">
+                            <h3 class="display-6">$250.00</h3>
+                            <span>PER PROJECT</span>
+                        </div>
+                        <ul class="list-style-none table-content display-5">
+                            <li>Branding</li>
+                            <li>Concepting</li>
+                            <li class="bg-secondary">Ui/Ux</li>
+                            <li>Marketing Material</li>
+                            <li class="bg-secondary">Website Design</li>
+                        </ul>
+                        <div>
+                            <a href="#" class="btn btn-primary">PURCHASE IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 justify-content-center col-lg-3 border">
+                    <div class="text-center price-items">
+                        <div class="p-2"><h4 class="h6" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">ENTERPRISE</h4></div>
+                        <div class="bg-dark text-muted">
+                            <h3 class="display-6">$300.00</h3>
+                            <span>PER PROJECT</span>
+                        </div>
+                        <ul class="list-style-none table-content display-5">
+                            <li>Branding</li>
+                            <li>Concepting</li>
+                            <li class="bg-secondary">Ui/Ux</li>
+                            <li>Marketing Material</li>
+                            <li class="bg-secondary">Website Design</li>
+                        </ul>
+                        <div>
+                            <a href="#" class="btn btn-primary">PURCHASE IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 justify-content-center col-lg-3 border">
+                    <div class="text-center price-item">
+                        <div class="p-2">
+                            <h4 class="h6" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">PRO ADVANCE</h4>
+                        </div>
+                        <div class="bg-dark text-muted">
+                            <h3 class="display-6">$100.00</h3>
+                            <span>PER PROJECT</span>
+                        </div>
+                        <ul class="list-style-none table-content display-5">
+                            <li>Branding</li>
+                            <li>Concepting</li>
+                            <li class="bg-secondary">Ui/Ux</li>
+                            <li>Marketing Material</li>
+                            <li class="bg-secondary">Website Design</li>
+                        </ul>
+                        <div>
+                            <a href="#" class="btn btn-primary">PURCHASE IT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="min-height: 5vh; margin-top: 50px;">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="index.html" class="btn btn-warning text-dark">Go To Home Page</a>
+            </div>
+        </div>
+    </div>
+   <div style="min-height: 40vh;">
+    <a href="#" class="gotopbtn"><i class="fa-solid fa-arrow-up"></i></a>
+   </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 40) {
+                    $('.gotopbtn').fadeIn();
+                } else{
+                    $('.gotopbtn').fadeOut();
+                }
+            });
+            
+            $('.gotopbtn').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+            });
+        });
+    </script>
+  </body>
+</html>
